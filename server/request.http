@@ -1,0 +1,37 @@
+### POST /register
+
+POST http://localhost:8000/users/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "test",
+    // "role":"admin" 
+}
+
+### POST /login
+
+POST http://localhost:8000/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "test"
+}
+
+
+### POST /posts
+POST http://localhost:8000/posts HTTP/1.1
+content-type: application/json
+Authorization: Bearer [Replace-with-a-valid-token]
+
+{
+   "owner":"Replace-with-a-registered-user-id",
+   "content":"Hello again"
+}
+
+### GET /posts
+GET http://localhost:8000/posts HTTP/1.1
+
+
+
